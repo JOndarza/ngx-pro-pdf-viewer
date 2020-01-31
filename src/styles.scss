@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+$pro-pdf-viewer-icons-size-w: 60px;
+$pro-pdf-viewer-icons-size-h: 50px;
+$pro-pdf-viewer-icons-separation: 10px;
+
+.pro-pdf-viewer-layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgb(160, 160, 160);
+}
+
+.pro-pdf-viewer-layout {
+  .pro-pdf-viewer-bar {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    background-color: dimgray;
+
+    .navigation {
+      margin: auto;
+    }
+  }
+}
+
+.pro-pdf-viewer-layout {
+  .pro-pdf-viewer-tools {
+    position: absolute;
+    height: inherit;
+    &.left,
+    &.right {
+      i {
+        position: fixed;
+        cursor: pointer;
+        background-color: cadetblue;
+        width: $pro-pdf-viewer-icons-size-w;
+        height: $pro-pdf-viewer-icons-size-h;
+        transition: all 0.1s ease-out;
+
+        &:nth-child(1) {
+          margin-top: $pro-pdf-viewer-icons-separation;
+        }
+
+        &:nth-child(2) {
+          margin-top: calc(1 * #{$pro-pdf-viewer-icons-size-h} + calc(2 * #{$pro-pdf-viewer-icons-separation}));
+        }
+
+        &:nth-child(3) {
+          margin-top: calc(2 * #{$pro-pdf-viewer-icons-size-h} + calc(3 * #{$pro-pdf-viewer-icons-separation}));
+        }
+      }
+    }
+
+    &.left {
+      left: 0;
+      i {
+        border-radius: 0 20% 20% 0;
+        &:hover {
+          width: calc(10px + #{$pro-pdf-viewer-icons-size-w});
+        }
+      }
+    }
+
+    &.right {
+      right: $pro-pdf-viewer-icons-size-w;
+      i {
+        border-radius: 20% 0 0 20%;
+        &:hover {
+          width: calc(10px + #{$pro-pdf-viewer-icons-size-w});
+          transform: translate(-10px);
+        }
+      }
+    }
+  }
+}
+
+.pro-pdf-viewer-layout {
+  .pro-pdf-viewer-core {
+    display: flex;
+    background-color: azure;
+    margin: auto;
+    width: 70%;
+    height: 100%;
+  }
+}

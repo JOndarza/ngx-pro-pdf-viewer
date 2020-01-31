@@ -1,6 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "variable-name": false,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -19,7 +20,8 @@
       true,
       "element",
       "app",
-      "kebab-case"
+      "kebab-case",
+      "pro-pdf-viewer"
     ],
     "import-blacklist": [
       true,
